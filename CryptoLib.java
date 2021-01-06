@@ -95,6 +95,9 @@ public class CryptoLib {
 	 * modular inverse does not exist.
 	 **/
 	public static int ModInv(int n, int m) {
+		if (n<0){
+			n += m;
+		}
 		int [] res = EEA(n, m);
 		int s = res[1];
 		// Check if s a negative number and make it positive
